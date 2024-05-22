@@ -2,6 +2,8 @@
 
 These are my nix files from a vm install of nixos using the budgie DE and hyprland.
 
+![screenshot of budgie desktop](./assets/1716420862.png)
+
 ## TODO:
 
 - [ ] Get [nixvim](https://github.com/nix-community/nixvim) configured
