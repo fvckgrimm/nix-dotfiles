@@ -14,6 +14,7 @@
       ./modules/nixos/programming-languages.nix
       ./modules/nixos/hyprland.nix
       ./modules/nixos/hacking/default.nix
+      ./modules/nixos/security/default.nix
     ];
 
   # Bootloader.
