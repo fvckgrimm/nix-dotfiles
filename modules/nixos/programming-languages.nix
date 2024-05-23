@@ -6,6 +6,7 @@
     go
     rustup
     python3
+    pipx
     cargo
     alejandra
     zig
