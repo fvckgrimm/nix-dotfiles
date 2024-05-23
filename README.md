@@ -1,6 +1,6 @@
 # Nix Dotfiles
 
-These are my nix files from a vm install of nixos using the budgie DE and hyprland.
+These are my nix files from a vm install of nixos using the budgie DE and hyprland in preparation of bare-metal install.
 
 ![screenshot of budgie desktop](./assets/1716420862.png)
 
