@@ -39,6 +39,7 @@
     jq
     rsync
     nuclear
+    cryptsetup
   ];
 
 }
