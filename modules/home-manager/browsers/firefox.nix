@@ -23,6 +23,21 @@
 
       search.force = true;
       search.engines = {
+        "Brave Search" = {
+          urls = [
+            {
+               template = "https://search.brave.com/search?q={searchTerms}";
+               parms = [
+                 {
+                   name = "query";
+                   value = "{searchTerms}";
+                 }
+               ];
+            }
+          ];
+          icon = ""; # need to get
+          definedAliases = ["@br"];
+        };
         "Home Manager NixOs" = {
           urls = [
             {
@@ -57,16 +72,16 @@
           icon = "''${pkgs.nixos-icons}/share/icons/hicolor/scalable/apps/nix-snowflake.svg";
           definedAliases = ["@np"];
         };
-	"NixOS Wiki" = {
+	      "NixOS Wiki" = {
           urls = [{template = "https://nixos.wiki/index.php?search={searchTerms}";}];
           iconUpdateURL = "https://nixos.wiki/favicon.png";
           updateInterval = 24 * 60 * 60 * 1000; # every day
           definedAliases = ["@nw"];
-        };
-        Bing.metaData.hidden = true;
-        "Amazon.com".metaData.hidden = true;
-        "Wikipedia (en)".metaData.hidden = true;
-        "Google".metaData.alias = "@g";
+         };
+         Bing.metaData.hidden = true;
+         "Amazon.com".metaData.hidden = true;
+         "Wikipedia (en)".metaData.hidden = true;
+         "Google".metaData.alias = "@g";
       };
 
       settings = {
