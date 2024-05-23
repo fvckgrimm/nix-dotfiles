@@ -7,7 +7,6 @@
     curlie
     brave
     chromium
-    imhex
     ani-cli
     httpie
     xfce.thunar
@@ -21,6 +20,16 @@
     insomnia
     yt-dlp
     ffmpeg
+    scrcpy
+    android-tools
+    fx
+    fclones
+    fclones-gui
+    textsnatcher
+    netcat-gnu
+    termusic
+    neo
+    asciiquarium
   ];
 
 }

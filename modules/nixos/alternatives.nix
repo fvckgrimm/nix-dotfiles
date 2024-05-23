@@ -20,6 +20,10 @@
     tldr
     micro
     fastfetch
+    rustdesk
+    fd
+    broot
+    procs
   ];
 
 }

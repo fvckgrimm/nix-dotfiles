@@ -23,6 +23,7 @@
     localsend
     wireguard-tools
     mullvad-vpn
+    openvpn
     ranger
     librewolf
     thunderbird
