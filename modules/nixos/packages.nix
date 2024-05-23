@@ -35,6 +35,9 @@
     unzip
     p7zip
     nettools
+    gnumake
+    jq
+    rsync
   ];
 
 }
