@@ -12,6 +12,7 @@
 	darkreader
 	firefox-color
 	nighttab
+  mullvad
 #	pay-by-privacy
 	blocktube
 	wayback-machine
