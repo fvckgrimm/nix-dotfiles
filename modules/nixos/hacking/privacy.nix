@@ -7,6 +7,7 @@
     onionshare
     tor
     tor-browser
+    mullvad-browser
   ];
 
 }
