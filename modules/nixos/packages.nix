@@ -38,6 +38,7 @@
     gnumake
     jq
     rsync
+    nuclear
   ];
 
 }
