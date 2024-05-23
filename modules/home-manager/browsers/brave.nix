@@ -22,6 +22,14 @@
       {id = "cjpalhdlnbpafiamejdnhcphjbkeiagm";}
       # Bitwarden
       {id = "nngceckbapebfimnlniiiahkandclblb";}
+      # Darkreader
+      {id = "eimadpbcbfnmbkopoojfekhnkhdbieeh";}
+      # Vimium
+      {id = "dbepggeogbaibhgnhhndojpepiihcmeb";}
+      # Unhook - Clean YT
+      {id = "khncfooichmfjbepaaaebmommgaepoid";}
+      # nightTab
+      {id = "hdpcadigjkbcpnlcpbcohpafiaefanki";}
     ];
   };
 }
