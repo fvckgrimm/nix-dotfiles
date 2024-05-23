@@ -17,6 +17,7 @@
     grimblast
     slurp
     swappy
+    shotman
   ];
 
 }
