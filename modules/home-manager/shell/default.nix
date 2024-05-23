@@ -6,6 +6,7 @@
     ./sh.nix
     ./zoxide.nix
     ./starship.nix
+    #./atuin.nix
   ];
     
 }
