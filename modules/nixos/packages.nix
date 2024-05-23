@@ -30,6 +30,10 @@
     termusic
     neo
     asciiquarium
+    toybox
+    zip
+    unzip
+    p7zip
   ];
 
 }
