@@ -17,6 +17,7 @@
     sherlock
     uncover
     nuclei
+    smbmap
   ];
 
 }
