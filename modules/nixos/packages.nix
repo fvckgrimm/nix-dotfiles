@@ -34,6 +34,7 @@
     zip
     unzip
     p7zip
+    nettools
   ];
 
 }
