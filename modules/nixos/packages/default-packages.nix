@@ -30,6 +30,7 @@
     opensnitch
     catppuccin-gtk
     catppuccin-sddm-corners
+    pika-backup
   ];
 
 }
