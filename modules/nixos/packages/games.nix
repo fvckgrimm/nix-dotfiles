@@ -10,6 +10,8 @@
     minecraft
     prismlauncher
     ryujinx
+    mindustry-wayland
+    mindustry
   ];
 
 }
