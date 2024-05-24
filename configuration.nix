@@ -8,12 +8,7 @@
   imports =
     [ # Include the results of the hardware scan.
       ./hardware-configuration.nix
-      ./modules/nixos/alternatives.nix
-      ./modules/nixos/crypto.nix
-      ./modules/nixos/default-packages.nix
-      ./modules/nixos/packages.nix
-      ./modules/nixos/programming-languages.nix
-      ./modules/nixos/hyprland.nix
+      ./modules/nixos/packages/default.nix 
       ./modules/nixos/hacking/default.nix
       ./modules/nixos/security/default.nix
     ];
