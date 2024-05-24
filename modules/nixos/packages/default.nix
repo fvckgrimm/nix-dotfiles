@@ -8,6 +8,7 @@
     ./packages.nix
     ./hyprland.nix
     ./alternatives.nix
+    ./productivity.nix
     ./default-packages.nix
     ./programming-languages.nix
   ];
