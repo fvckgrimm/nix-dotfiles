@@ -6,6 +6,7 @@
     wasabiwallet
     monero-gui
     # xmrig
+    exodus
   ];
 
 }
