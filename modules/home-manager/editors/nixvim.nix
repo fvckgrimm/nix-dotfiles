@@ -140,6 +140,7 @@
         #  };
         #};
 
+        which-key.enable = true;
         nvim-autopairs.enable = true;
         toggleterm.enable = true;
         #toggleterm.extraOptions.close_on_exit = true;
