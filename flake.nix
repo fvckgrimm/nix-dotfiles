@@ -8,27 +8,19 @@
     home-manager.url = "github:nix-community/home-manager/release-23.11";
     home-manager.inputs.nixpkgs.follows = "nixpkgs";
     hyprland.url = "github:hyprwm/Hyprland";
-    #nixvim.url = "github:nix-community/nixvim/nixos-23.11";
-    #nixvim.inputs.nixpkgs.follows = "nixpkgs";
+    nixvim.url = "github:nix-community/nixvim/nixos-23.11";
+    nixvim.inputs.nixpkgs.follows = "nixpkgs";
     firefox-addons = {
       url = "gitlab:rycee/nur-expressions?dir=pkgs/firefox-addons";
       inputs.nixpkgs.follows = "nixpkgs";
     };
   };
 
-  outputs = {self, nixpkgs, catppuccin, home-manager, ...}@inputs:
+  outputs = {self, nixpkgs, catppuccin, nixvim, home-manager, ...}@inputs:
     let 
       lib = nixpkgs.lib;
       system = "x86_64-linux";
       pkgs = nixpkgs.legacyPackages.${system};
-
-      #nixvimLib = nixvim.lib.${system};
-      #nixvim' = nixvim.legacyPackages.${system};
-      #nixvimModule = {
-      #  inherit pkgs;
-      #	module = import /home/grimm/dotfiles/config;
-      #};
-      #nvim = nixvim'.makeNixvimWithModule nixvimModule;
 
     in {
     nixosConfigurations = {
@@ -47,7 +39,7 @@
 	modules = [ 
 	  ./home.nix 
 	  catppuccin.homeManagerModules.catppuccin
-	  #nixvim.homeManagerModules.nixvim
+	  nixvim.homeManagerModules.nixvim
 	];
       };
     };

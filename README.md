@@ -6,7 +6,7 @@ These are my nix files from a vm install of nixos using the budgie DE and hyprla
 
 ## TODO
 
-- [ ] Get [nixvim](https://github.com/nix-community/nixvim) configured
+- [x] Get [nixvim](https://github.com/nix-community/nixvim) configured
 - [ ] Move hyprland config to home-manager
 - [ ] Move other .configs to home-manager
 - [x] Setup encrypted install - (probably just gonna use the gui installer like a pleb)

@@ -9,7 +9,7 @@
   imports = [
     ./modules/home-manager/shell/default.nix
     ./modules/home-manager/editors/micro.nix
-    #./modules/home-manager/editors/neovim.nix
+    ./modules/home-manager/editors/nixvim.nix
     ./modules/home-manager/browsers/default.nix
   ];
 
@@ -80,7 +80,7 @@
   };
 
   # Nixvim
-  #programs.nixvim.enable = true;
+  programs.nixvim.enable = true;
   #programs.nixvim.defaultEditor = true;
 
   #Git 
