@@ -24,6 +24,7 @@
     fd
     broot
     procs
+    duf
   ];
 
 }
