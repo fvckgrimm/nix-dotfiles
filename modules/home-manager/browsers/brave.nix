@@ -30,6 +30,8 @@
       {id = "khncfooichmfjbepaaaebmommgaepoid";}
       # nightTab
       {id = "hdpcadigjkbcpnlcpbcohpafiaefanki";}
+      # webrecorder
+      {id = "fpeoodllldobpkbkabpblcfaogecpndd";}
     ];
   };
 }
