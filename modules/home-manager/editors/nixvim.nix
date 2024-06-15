@@ -214,7 +214,11 @@
           enable = true;
           servers = {
             tsserver.enable = true;
+<<<<<<< HEAD
+            nil-ls = {
+=======
             nil_ls = {
+>>>>>>> df95a740e007c03e6bbbc961ebbb99cc5a74d610
               enable = true;
             };
             pylsp = {

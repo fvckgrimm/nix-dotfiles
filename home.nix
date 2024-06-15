@@ -20,7 +20,11 @@
   # You should not change this value, even if you update Home Manager. If you do
   # want to update the value, then make sure to first check the Home Manager
   # release notes.
+<<<<<<< HEAD
+  home.stateVersion = "24.05"; # Please read the comment before changing.
+=======
   home.stateVersion = "23.11"; # Please read the comment before changing.
+>>>>>>> df95a740e007c03e6bbbc961ebbb99cc5a74d610
 
   # The home.packages option allows you to install Nix packages into your
   # environment.
@@ -86,6 +90,11 @@
   #Git 
   programs.git = {
     enable = true;
+<<<<<<< HEAD
+    userName = "Grimm";
+    userEmail = "fvckgrimm@protonmail.ch";
+=======
+>>>>>>> df95a740e007c03e6bbbc961ebbb99cc5a74d610
     aliases = {
       pu = "push";
       co = "checkout";

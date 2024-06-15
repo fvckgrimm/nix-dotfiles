@@ -8,18 +8,35 @@
   imports =
     [ # Include the results of the hardware scan.
       ./hardware-configuration.nix
+<<<<<<< HEAD
+      ./modules/nixos/packages/default.nix
+=======
       ./modules/nixos/packages/default.nix 
+>>>>>>> df95a740e007c03e6bbbc961ebbb99cc5a74d610
       ./modules/nixos/hacking/default.nix
       ./modules/nixos/security/default.nix
     ];
 
   # Bootloader.
+<<<<<<< HEAD
+  boot.loader.systemd-boot.enable = true;
+  boot.loader.efi.canTouchEfiVariables = true;
+
+  boot.initrd.luks.devices."luks-484ebfa9-d0c5-4606-a04f-2c627a7995cd".device = "/dev/disk/by-uuid/484ebfa9-d0c5-4606-a04f-2c627a7995cd";
+  networking.hostName = "desolate"; # Define your hostname.
+  #networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
+
+  boot.kernalParams = [ "button.lid_init_state=open" ];
+  powerManagement.powerUpCommands = "sudo rmmod atkbd; sudo modprobe atkbd reset=1;"
+
+=======
   boot.loader.grub.enable = true;
   boot.loader.grub.device = "/dev/vda";
   boot.loader.grub.useOSProber = true;
 
   networking.hostName = "nixos"; # Define your hostname.
   # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
+>>>>>>> df95a740e007c03e6bbbc961ebbb99cc5a74d610
 
   # Configure network proxy if necessary
   # networking.proxy.default = "http://user:password@proxy:port/";
@@ -48,7 +65,11 @@
 
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
 
+<<<<<<< HEAD
+  fonts.packages = with pkgs; [ (nerdfonts.override { fonts = [ "JetBrainsMono" ]; }) ];
+=======
   fonts.packages = with pkgs; [ (nerdfonts.override {fonts = [ "JetBrainsMono" ]; }) ];
+>>>>>>> df95a740e007c03e6bbbc961ebbb99cc5a74d610
 
   # Enable the X11 windowing system.
   services.xserver.enable = true;
@@ -56,12 +77,15 @@
   # Enable the Budgie Desktop environment.
   services.xserver.displayManager.lightdm.enable = true;
   services.xserver.desktopManager.budgie.enable = true;
+<<<<<<< HEAD
+=======
   #services.xserver.displayManager.sddm.enable = true;
   #services.xserver.displayManager.sddm.theme = "catppuccin-sddm-corners";
   #services.xserver.displayManager.sddm = {
   #  enable = true;
   #  theme = "catppuccin-mocha";
   #};
+>>>>>>> df95a740e007c03e6bbbc961ebbb99cc5a74d610
 
   # Hyprland
   programs.hyprland.enable = true;
@@ -73,7 +97,11 @@
   ];
 
   environment.sessionVariables = {
+<<<<<<< HEAD
+    #WLR_RENDERER_ALLOW_SOFTWARE = "1";
+=======
     WLR_RENDERER_ALLOW_SOFTWARE = "1";
+>>>>>>> df95a740e007c03e6bbbc961ebbb99cc5a74d610
     NIXOS_OZONE_WL = "1";
   };
 
@@ -90,7 +118,10 @@
   services.printing.enable = true;
 
   # Enable sound with pipewire.
+<<<<<<< HEAD
+=======
   sound.enable = true;
+>>>>>>> df95a740e007c03e6bbbc961ebbb99cc5a74d610
   hardware.pulseaudio.enable = false;
   security.rtkit.enable = true;
   services.pipewire = {
@@ -108,9 +139,12 @@
 
   # Enable touchpad support (enabled default in most desktopManager).
   # services.xserver.libinput.enable = true;
+<<<<<<< HEAD
+=======
   environment.shells = with pkgs; [ bash zsh fish nushell ];
   users.defaultUserShell = pkgs.zsh;
 
+>>>>>>> df95a740e007c03e6bbbc961ebbb99cc5a74d610
 
   # Define a user account. Don't forget to set a password with ‘passwd’.
   users.users.grimm = {
@@ -118,18 +152,39 @@
     description = "grimm";
     extraGroups = [ "networkmanager" "wheel" ];
     packages = with pkgs; [
+<<<<<<< HEAD
+=======
       firefox
+>>>>>>> df95a740e007c03e6bbbc961ebbb99cc5a74d610
     #  thunderbird
     ];
   };
 
+<<<<<<< HEAD
+  environment.shells = with pkgs; [ bash zsh fish nushell ];
+  users.defaultUserShell = pkgs.zsh;
+
+  # Install firefox.
+  programs.firefox.enable = true;
+
+=======
+>>>>>>> df95a740e007c03e6bbbc961ebbb99cc5a74d610
   # Allow unfree packages
   nixpkgs.config.allowUnfree = true;
 
   # List packages installed in system profile. To search, run:
   # $ nix search wget
   environment.systemPackages = with pkgs; [
+<<<<<<< HEAD
+  vim # Do not forget to add an editor to edit configuration.nix! The Nano editor is also installed by default.
+  wget
+  git
+  neovim
   ];
+
+=======
+  ];
+>>>>>>> df95a740e007c03e6bbbc961ebbb99cc5a74d610
   programs.zsh.enable = true;
   services.dbus.enable = true;
   security.polkit.enable = true;
@@ -148,7 +203,10 @@
   services.openssh.enable = true;
   services.mullvad-vpn.enable = true;
   services.opensnitch.enable = true;
+<<<<<<< HEAD
+=======
   # services.printing.enable = true;
+>>>>>>> df95a740e007c03e6bbbc961ebbb99cc5a74d610
 
   # Open ports in the firewall.
   # networking.firewall.allowedTCPPorts = [ ... ];
@@ -162,6 +220,10 @@
   # this value at the release version of the first install of this system.
   # Before changing this value read the documentation for this option
   # (e.g. man configuration.nix or on https://nixos.org/nixos/options.html).
+<<<<<<< HEAD
+  system.stateVersion = "24.05"; # Did you read the comment?
+=======
   system.stateVersion = "23.11"; # Did you read the comment?
+>>>>>>> df95a740e007c03e6bbbc961ebbb99cc5a74d610
 
 }
