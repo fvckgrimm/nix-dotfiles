@@ -21,7 +21,7 @@
   networking.hostName = "desolate"; # Define your hostname.
   #networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
 
-  #boot.kernalParams = [ "button.lid_init_state=open" ];
+  boot.kernelParams = [ "button.lid_init_state=open" ];
   powerManagement.enable = true;
   #powerManagement.powerUpCommands = "sudo rmmod atkbd; sudo modprobe atkbd reset=1";
   powerManagement.resumeCommands = "${pkgs.kmod}/bin/rmmod atkbd; ${pkgs.kmod}/bin/modprobe atkbd reset=1";
