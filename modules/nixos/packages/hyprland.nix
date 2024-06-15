@@ -13,6 +13,7 @@
     nwg-displays
     wlsunset
     wl-clipboard
+    wlogout
     grim
     grimblast
     slurp
