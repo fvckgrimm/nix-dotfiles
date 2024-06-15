@@ -13,8 +13,8 @@
   boot.initrd.kernelModules = [ ];
   boot.kernelModules = [ "kvm-intel" ];
   boot.extraModulePackages = with config.boot.kernelPackages; [ 
-  rtl8812au 
-  #rtl88xxau-aircrack
+  #rtl8812au 
+  rtl88xxau-aircrack
   ];
 
   fileSystems."/" =
