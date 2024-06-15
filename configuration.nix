@@ -26,7 +26,6 @@
   #powerManagement.powerUpCommands = "sudo rmmod atkbd; sudo modprobe atkbd reset=1";
   powerManagement.resumeCommands = "sudo ${pkgs.kmod}/bin/rmmod atkbd; sudo ${pkgs.kmod}/bin/modprobe atkbd reset=1";
 
-  boot.extraModulePackages = [ config.boot.kernelPackages.rtl8821ce ];
 
   services.logind.extraConfig = ''
     HandlePowerKey=suspend-then-hibernate

@@ -14,6 +14,8 @@
   boot.kernelModules = [ "kvm-intel" ];
   boot.extraModulePackages = [ ];
 
+  boot.extraModulePackages = [ config.boot.kernelPackages.rtl8812au ];
+
   fileSystems."/" =
     { device = "/dev/disk/by-uuid/d5ec068c-e636-4b37-a646-cea5ed9b45bf";
       fsType = "ext4";
