@@ -22,7 +22,10 @@
   #networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
 
   #boot.kernalParams = [ "button.lid_init_state=open" ];
+  powerManagement.enable = true;
   powerManagement.powerUpCommands = "sudo rmmod atkbd; sudo modprobe atkbd reset=1";
+  powerManagement.resumeCommands = "sudo rmmod atkbd; sudo modprobe atkbd reset=1";
+
 
 
   # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
