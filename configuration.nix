@@ -24,7 +24,7 @@
   boot.kernelParams = [ "button.lid_init_state=open" ];
   powerManagement.enable = true;
   #powerManagement.powerUpCommands = "sudo rmmod atkbd; sudo modprobe atkbd reset=1";
-  powerManagement.resumeCommands = "${pkgs.kmod}/bin/rmmod atkbd; ${pkgs.kmod}/bin/modprobe atkbd reset=1";
+  powerManagement.resumeCommands = "sudo ${pkgs.kmod}/bin/rmmod atkbd; sudo ${pkgs.kmod}/bin/modprobe atkbd reset=1";
 
 
 
