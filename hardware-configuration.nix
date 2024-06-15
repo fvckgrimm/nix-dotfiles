@@ -12,8 +12,6 @@
   boot.initrd.availableKernelModules = [ "xhci_pci" "nvme" "usb_storage" "sd_mod" "hid_generic" "applespi" "applesmc" "hid_apple" "intel_lpss_pci" "spi_pxa2xx_platform" ];
   boot.initrd.kernelModules = [ ];
   boot.kernelModules = [ "kvm-intel" ];
-  boot.extraModulePackages = [ ];
-
   boot.extraModulePackages = [ config.boot.kernelPackages.rtl8812au ];
 
   fileSystems."/" =
