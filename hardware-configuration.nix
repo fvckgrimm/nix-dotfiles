@@ -12,7 +12,10 @@
   boot.initrd.availableKernelModules = [ "xhci_pci" "nvme" "usb_storage" "sd_mod" "hid_generic" "applespi" "applesmc" "hid_apple" "intel_lpss_pci" "spi_pxa2xx_platform" ];
   boot.initrd.kernelModules = [ ];
   boot.kernelModules = [ "kvm-intel" ];
-  boot.extraModulePackages = [ config.boot.kernelPackages.rtl8812au ];
+  boot.extraModulePackages = with config.boot.kernelPackages; [ 
+  rtl8812au 
+  #rtl88xxau-aircrack
+  ];
 
   fileSystems."/" =
     { device = "/dev/disk/by-uuid/d5ec068c-e636-4b37-a646-cea5ed9b45bf";
