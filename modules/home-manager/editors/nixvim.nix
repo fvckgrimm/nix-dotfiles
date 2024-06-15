@@ -174,7 +174,7 @@
           enable = true;
         };
         neorg = {
-          enable = true;
+          enable = false;
         };
         treesitter-context = {
           enable = true;
