@@ -18,7 +18,11 @@
   boot.loader.efi.canTouchEfiVariables = true;
 
   boot.initrd.luks.devices."luks-484ebfa9-d0c5-4606-a04f-2c627a7995cd".device = "/dev/disk/by-uuid/484ebfa9-d0c5-4606-a04f-2c627a7995cd";
-  boot.initrd.availableKernelModules = [ "applespi" "hid_generic" ];
+  boot.initrd.availableKernelModules = [ 
+  "applespi" 
+  "applesmc"
+  "hid_generic" 
+  ];
   networking.hostName = "desolate"; # Define your hostname.
   #networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
 
