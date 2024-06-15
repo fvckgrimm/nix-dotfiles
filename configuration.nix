@@ -27,6 +27,16 @@
   powerManagement.resumeCommands = "sudo ${pkgs.kmod}/bin/rmmod atkbd; sudo ${pkgs.kmod}/bin/modprobe atkbd reset=1";
 
 
+  services.logind.extraConfig = ''
+    HandlePowerKey=suspend-then-hibernate
+    HandlePowerKeyLongPress=poweroff
+    HandleLidSwitch=suspend-then-hibernate
+    HandleLidSwitchExternalPower=suspend-then-hibernate
+    HandleLidSwitchDocked=suspend-then-hibernate
+    HoldoffTimeoutSec=5s
+    IdleAction=suspend
+    IdleActionSec=300s
+  '';
 
   # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
 
