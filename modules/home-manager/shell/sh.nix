@@ -12,11 +12,7 @@
   # ZSH
   programs.zsh = {
     enable = true;
-<<<<<<< HEAD
     autosuggestion.enable = true;
-=======
-    enableAutosuggestions = true;
->>>>>>> df95a740e007c03e6bbbc961ebbb99cc5a74d610
     autocd = true;
 
     dirHashes = {
@@ -36,11 +32,7 @@
 
     shellAliases = {
       # NIX related
-<<<<<<< HEAD
       switch-build = "sudo nixos-rebuild switch --flake .#desolate";
-=======
-      switch-build = "sudo nixos-rebuild switch --flake .";
->>>>>>> df95a740e007c03e6bbbc961ebbb99cc5a74d610
       switch-home = "home-manager switch --flake .";
       cleanup = "sudo nix-collect-garbage --delete-older-than 1d";
       listgen = "sudo nix-env -p /nix/var/nix/profiles/system --list-generations";
