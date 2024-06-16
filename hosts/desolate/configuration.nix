@@ -8,9 +8,9 @@
   imports =
     [ # Include the results of the hardware scan.
       ./hardware-configuration.nix
-      ./modules/nixos/packages/default.nix
-      ./modules/nixos/hacking/default.nix
-      ./modules/nixos/security/default.nix
+      ../../modules/nixos/packages/default.nix
+      ../../modules/nixos/hacking/default.nix
+      ../../modules/nixos/security/default.nix
     ];
 
   # Bootloader.

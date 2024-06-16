@@ -27,7 +27,7 @@
       desolate = lib.nixosSystem {
         inherit system;
         modules = [ 
-	  ./configuration.nix
+	  ./hosts/desolate/configuration.nix
           home-manager.nixosModules.home-manager
         ];
       };
@@ -37,7 +37,7 @@
         inherit pkgs;
 	extraSpecialArgs = { inherit inputs; };
 	modules = [ 
-	  ./home.nix 
+	  ./hosts/desolate/home.nix 
 	  catppuccin.homeManagerModules.catppuccin
 	  nixvim.homeManagerModules.nixvim
 	];
