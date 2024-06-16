@@ -27,6 +27,7 @@
   powerManagement.resumeCommands = "sudo ${pkgs.kmod}/bin/rmmod atkbd; sudo ${pkgs.kmod}/bin/modprobe atkbd reset=1";
 
   hardware.bluetooth.enable = true;
+  services.blueman.enable = true;
 
   services.logind.extraConfig = ''
     HandlePowerKey=suspend-then-hibernate
