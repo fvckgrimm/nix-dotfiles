@@ -8,7 +8,7 @@
 
 will get updated over time
 
- - [desolate](./hosts/desolate) - 2017 13" macbook pro that I really only use during summer cuz fuck a desktop
+ - [desolate](./hosts/desolate) - 2017 13" macbook pro that I really only use during summer cuz fuck a desktop during the summer heat
 
 
 ## TODO
