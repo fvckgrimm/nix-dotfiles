@@ -1,6 +1,7 @@
 # Nix Dotfiles
 
 ![screenshot of hyprland setup](./assets/1718526703.png)
+---
 ![screenshot of budgie desktop](./assets/1716420862.png)
 
 
