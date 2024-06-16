@@ -69,7 +69,7 @@
 
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
 
-  fonts.packages = with pkgs; [ (nerdfonts.override { fonts = [ "JetBrainsMono" ]; }) ];
+  fonts.packages = with pkgs; [ (nerdfonts.override { fonts = [ "JetBrainsMono" ]; }) noto-fonts noto-fonts-cjk noto-fonts-emoji ];
 
   # Enable the X11 windowing system.
   services.xserver.enable = true;
