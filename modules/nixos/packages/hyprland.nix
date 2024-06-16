@@ -20,6 +20,7 @@
     slurp
     swappy
     shotman
+    lxappearance
   ];
 
 }
