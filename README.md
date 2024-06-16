@@ -25,4 +25,4 @@ will get updated over time
 
 - [linuxmobile](https://github.com/linuxmobile/kaku) - always has amazing setups, can't help but take parts
 - [NXM1](https://github.com/XNM1/linux-nixos-hyprland-config-dotfiles) - also an amazing setup but only took some of the security shit (didn't even properly set it up yet.)
-- [sioodmy](https://github.com/sioodmy/dotfiles) - don't think i took anything, but why not ig? shoutout noboilerplate
+- [sioodmy](https://github.com/sioodmy/dotfiles) - don't think i took anything, yet, but why not ig? shoutout noboilerplate
