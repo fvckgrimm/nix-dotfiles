@@ -30,6 +30,7 @@
     librewolf
     thunderbird
     opensnitch
+    opensnitch-ui
     catppuccin-gtk
     catppuccin-sddm-corners
     pika-backup
