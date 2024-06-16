@@ -4,6 +4,7 @@
 ---
 ![screenshot of budgie desktop](./assets/1716420862.png)
 
+For now, most of [my dotfiles](https://github.com/fvckgrimm/dotfiles) are still in .config, I may move most things over to home-manager (there's a chance i might just setup stow and keep everything in .config)
 
 ## Hosts
 
