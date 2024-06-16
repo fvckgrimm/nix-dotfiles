@@ -21,6 +21,7 @@
     swappy
     shotman
     lxappearance
+    nwg-look
   ];
 
 }
