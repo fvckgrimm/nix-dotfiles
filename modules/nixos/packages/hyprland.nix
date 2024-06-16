@@ -9,6 +9,7 @@
     rofi-wayland
     rofi-emoji
     networkmanagerapplet
+    blueman
     wlr-randr
     nwg-displays
     wlsunset
