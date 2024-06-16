@@ -24,6 +24,7 @@
     lxappearance
     nwg-look
     pavucontrol
+    ags
   ];
 
 }
