@@ -10,5 +10,5 @@ These are my nix files from a vm install of nixos using the budgie DE and hyprla
 - [ ] Move hyprland config to home-manager
 - [ ] Move other .configs to home-manager
 - [x] Setup encrypted install - (probably just gonna use the gui installer like a pleb)
-- [x] add security with fail2ban, usbguard, firejail
+- [x] add security with fail2ban, usbguard, firejail - (just stole shit from [NXM1's dotfiles](https://github.com/XNM1/linux-nixos-hyprland-config-dotfiles))
 - [ ] move some personal scripts to Nixos following [vimjoyers vid](https://www.youtube.com/watch?v=diIh0P12arA) using `writeShellScriptBin`
