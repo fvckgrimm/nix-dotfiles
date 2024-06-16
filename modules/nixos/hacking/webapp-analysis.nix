@@ -7,6 +7,8 @@
     dirbuster
     nikto
     ffuf
+    mitmproxy
+    sqlitebrowser
   ];
 
 }

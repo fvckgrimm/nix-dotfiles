@@ -10,6 +10,8 @@
     ./webapp-analysis.nix
     ./reverse-engineer.nix
     ./privacy.nix
+    ./forensics.nix
+    ./post-explot.nix
   ];
 
 }
