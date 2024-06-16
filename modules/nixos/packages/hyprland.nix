@@ -23,6 +23,7 @@
     shotman
     lxappearance
     nwg-look
+    pavucontrol
   ];
 
 }
