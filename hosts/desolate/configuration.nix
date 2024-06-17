@@ -8,6 +8,7 @@
   imports =
     [ # Include the results of the hardware scan.
       ./hardware-configuration.nix
+      ./mac-things.nix
       ../../modules/nixos/packages/default.nix
       ../../modules/nixos/hacking/default.nix
       ../../modules/nixos/security/default.nix
@@ -27,30 +28,7 @@
   powerManagement.resumeCommands = "sudo ${pkgs.kmod}/bin/rmmod atkbd; sudo ${pkgs.kmod}/bin/modprobe atkbd reset=1";
 
   hardware.bluetooth.enable = true;
-  hardware.facetimehd.enable = true;
   services.blueman.enable = true;
-
-  services.logind.extraConfig = ''
-    HandlePowerKey=suspend-then-hibernate
-    HandlePowerKeyLongPress=poweroff
-    HandleLidSwitch=suspend-then-hibernate
-    HandleLidSwitchExternalPower=suspend-then-hibernate
-    HandleLidSwitchDocked=suspend-then-hibernate
-    HoldoffTimeoutSec=5s
-    IdleAction=suspend
-    IdleActionSec=300s
-  '';
-
-  # Potential fix to mac not resuming on wake up 
-  systemd.services.disable-d3cold = {
-    enable = true;
-    description = "Disable D3cold for PCI device 0000:01:00.0";
-    serviceConfig.Type = "oneshot";
-    script = ''
-      echo 0 > /sys/bus/pci/devices/0000:01:00.0/d3cold_allowed
-    '';
-    wantedBy = [ "multi-user.target" ];
-  };
 
   # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
 
@@ -192,10 +170,6 @@
   services.openssh.enable = true;
   services.mullvad-vpn.enable = true;
   services.opensnitch.enable = true;
-  services.mbpfan.enable = true;
-  services.mbpfan.settings = {
-    
-  };
   # services.printing.enable = true;
 
   # Open ports in the firewall.
