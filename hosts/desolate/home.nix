@@ -84,16 +84,16 @@
   #programs.nixvim.defaultEditor = true;
 
   #Git 
-  programs.git = {
-    enable = true;
-    userName = "Grimm";
-    userEmail = "fvckgrimm@protonmail.ch";
-    aliases = {
-      pu = "push";
-      co = "checkout";
-      cm = "commit";
-    };
-  };
+  #programs.git = {
+  #  enable = true;
+  #  userName = "Grimm";
+  #  userEmail = "fvckgrimm@protonmail.ch";
+  #  aliases = {
+  #    pu = "push";
+  #    co = "checkout";
+  #    cm = "commit";
+  #  };
+  #};
   
   catppuccin.enable = true;
   gtk.enable = true;
