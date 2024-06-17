@@ -30,7 +30,7 @@
   };
 
   services.mbpfan = {
-    enable = true;
+    enable = false;
     aggressive = true;
   };
 
