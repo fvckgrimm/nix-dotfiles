@@ -41,6 +41,16 @@
     IdleActionSec=300s
   '';
 
+  # Potential fix to mac not resuming on wake up 
+  systemd.services.disable-d3cold = {
+    description = "Disable D3cold for PCI device 0000:01:00.0";
+    serviceConfig.Type = "oneshot";
+    script = ''
+      echo 0 > /sys/bus/pci/devices/0000:01:00.0/d3cold_allowed
+    '';
+    wantedBy = [ "multi-user.target" ];
+  };
+
   # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
 
   # Configure network proxy if necessary
