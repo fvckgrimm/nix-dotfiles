@@ -27,6 +27,7 @@
   powerManagement.resumeCommands = "sudo ${pkgs.kmod}/bin/rmmod atkbd; sudo ${pkgs.kmod}/bin/modprobe atkbd reset=1";
 
   hardware.bluetooth.enable = true;
+  hardware.facetimehd.enable = true;
   services.blueman.enable = true;
 
   services.logind.extraConfig = ''
@@ -180,6 +181,10 @@
   services.openssh.enable = true;
   services.mullvad-vpn.enable = true;
   services.opensnitch.enable = true;
+  services.mbpfan.enable = true;
+  services.mbpfan.settings = {
+    
+  };
   # services.printing.enable = true;
 
   # Open ports in the firewall.
