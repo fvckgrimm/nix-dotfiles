@@ -43,6 +43,7 @@
 
   # Potential fix to mac not resuming on wake up 
   systemd.services.disable-d3cold = {
+    enable = true;
     description = "Disable D3cold for PCI device 0000:01:00.0";
     serviceConfig.Type = "oneshot";
     script = ''
