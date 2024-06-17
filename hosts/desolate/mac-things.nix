@@ -29,9 +29,9 @@
     wantedBy = [ "multi-user.target" ];
   };
 
-  services.mbpfan.enable = true;
-  services.mbpfan.settings = {
-    
+  services.mbpfan = {
+    enable = true;
+    aggressive = true;
   };
 
   
