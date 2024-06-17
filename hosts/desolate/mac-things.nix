@@ -31,7 +31,12 @@
 
   services.mbpfan = {
     enable = true;
-    aggressive = true;
+    aggressive = false;
+    settings.general = {
+        low_temp = 50;
+        high_temp = 55;
+        max_temp = 65;
+    };
   };
 
   
