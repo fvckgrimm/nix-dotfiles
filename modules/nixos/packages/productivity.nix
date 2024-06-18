@@ -8,6 +8,7 @@
     cloudflared
     soft-serve
     gitleaks
+    obsidian
   ];
 
 }
