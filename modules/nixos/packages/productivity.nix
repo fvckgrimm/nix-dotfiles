@@ -6,6 +6,7 @@
     libreoffice
     onlyoffice-bin
     cloudflared
+    soft-serve
   ];
 
 }
