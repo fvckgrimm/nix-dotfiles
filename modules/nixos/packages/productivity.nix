@@ -7,6 +7,7 @@
     onlyoffice-bin
     cloudflared
     soft-serve
+    gitleaks
   ];
 
 }
