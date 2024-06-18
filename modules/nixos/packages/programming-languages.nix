@@ -12,6 +12,7 @@
     zig
     nim
     volta
+    nodejs_22
     libgcc
   ];
 
