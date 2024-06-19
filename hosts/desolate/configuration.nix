@@ -60,7 +60,7 @@
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
 
   fonts.packages = with pkgs; [ 
-    (nerdfonts.override { fonts = [ "JetBrainsMono" "DroidSansMono" "Hack" "FiraCode" ]; }) 
+    (nerdfonts.override { fonts = [ "JetBrainsMono" "DroidSansMono" "Hack" "FiraCode" "GeistMono" "NerdFontsSymbolsOnly" ]; }) 
     ubuntu_font_family
     liberation_ttf
     fira-code
