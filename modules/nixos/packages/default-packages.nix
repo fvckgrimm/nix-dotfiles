@@ -4,6 +4,7 @@
 
   environment.systemPackages = with pkgs; [
     mbpfan
+    stow
     kitty
     ueberzugpp
     neovim
