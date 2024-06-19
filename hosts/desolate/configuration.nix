@@ -68,7 +68,8 @@
     noto-fonts 
     noto-fonts-cjk 
     noto-fonts-emoji 
-    dejavu_fonts 
+    dejavu_fonts
+    material-symbols
   ];
 
   # Enable the X11 windowing system.
