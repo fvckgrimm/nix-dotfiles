@@ -209,6 +209,9 @@
         };
         chadtree = {
           enable = true;
+          view = {
+            openDirection = "right";
+          };
         };
         lsp = {
           enable = true;
