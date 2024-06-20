@@ -72,6 +72,26 @@
     material-symbols
   ];
 
+  fonts.fontconfig = {
+      enable = true;
+      antialias = true;
+      hinting = {
+        enable = true;
+        autohint = false;
+        style = "full";
+      };
+      subpixel = {
+        lcdfilter = "default";
+        rgba = "rgb";
+      };
+      defaultFonts = {
+        serif = [ "JetBrainsMono" "Noto Color Emoji"];
+        sansSerif = [ "JetBrainsMono" "Noto Color Emoji"];
+        monospace = ["GeistMono Nerd Font" "Noto Color Emoji"];
+        emoji = ["Noto Color Emoji"];
+      };
+    };
+    
   # Enable the X11 windowing system.
   services.xserver.enable = true;
 

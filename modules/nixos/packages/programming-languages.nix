@@ -11,6 +11,7 @@
     alejandra
     zig
     nim
+    nimble
     volta
     nodejs_22
     libgcc
