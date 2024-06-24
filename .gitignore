@@ -2,3 +2,4 @@
 hardware-configuration.nix-git.bak
 configuration.nix-git.bak
 flake.lock.bak
+pgks/

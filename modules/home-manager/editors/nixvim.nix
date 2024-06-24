@@ -209,10 +209,8 @@
         };
         chadtree = {
           enable = true;
-          view = {
-            openDirection = "right";
-          };
         };
+        chadtree.view.openDirection = "right";
         lsp = {
           enable = true;
           servers = {
@@ -255,6 +253,7 @@
             };
             gopls = {
               enable = true;
+              autostart = true;
             };
             #marksman = {
             #  enable = true;

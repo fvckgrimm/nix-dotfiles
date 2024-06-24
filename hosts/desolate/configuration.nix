@@ -73,8 +73,8 @@
   ];
 
   fonts.fontconfig = {
-      enable = true;
-      antialias = true;
+     enable = true;
+     antialias = true;
       hinting = {
         enable = true;
         autohint = false;
@@ -85,9 +85,9 @@
         rgba = "rgb";
       };
       defaultFonts = {
-        serif = [ "JetBrainsMono" "Noto Color Emoji"];
-        sansSerif = [ "JetBrainsMono" "Noto Color Emoji"];
-        monospace = ["GeistMono Nerd Font" "Noto Color Emoji"];
+        serif = [ "DejaVu Math TeX Gyre" "JetBrainsMono" "Noto Color Emoji"];
+        sansSerif = [ "Ubuntu" "Hack" "JetBrainsMono" "Noto Color Emoji"];
+        monospace = [ "GeistMono Nerd Font" "Noto Color Emoji"];
         emoji = ["Noto Color Emoji"];
       };
     };
