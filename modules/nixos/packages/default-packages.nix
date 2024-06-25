@@ -5,6 +5,7 @@
   environment.systemPackages = with pkgs; [
     mbpfan
     stow
+    qutebrowser
     kitty
     ueberzugpp
     neovim

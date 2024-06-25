@@ -8,6 +8,7 @@
     brave
     chromium
     ani-cli
+    streamlink
     httpie
     xfce.thunar
     logseq
