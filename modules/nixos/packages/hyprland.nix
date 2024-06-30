@@ -18,6 +18,7 @@
     wlogout
     grim
     grimblast
+    wf-recorder
     slurp
     swappy
     shotman
