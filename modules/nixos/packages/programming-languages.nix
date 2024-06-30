@@ -15,6 +15,8 @@
     volta
     nodejs_22
     libgcc
+    openssl
+    binutils_nogold
   ];
 
 }
