@@ -9,6 +9,7 @@
     soft-serve
     gitleaks
     obsidian
+    asciinema
   ];
 
 }
