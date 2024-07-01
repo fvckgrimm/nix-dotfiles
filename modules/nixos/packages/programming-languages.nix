@@ -4,6 +4,7 @@
 
   environment.systemPackages = with pkgs; [
     go
+    gopls
     rustup
     python3
     pipx
@@ -12,6 +13,7 @@
     zig
     nim
     nimble
+    nimlangserver
     volta
     nodejs_22
     libgcc

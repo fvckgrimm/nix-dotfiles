@@ -117,28 +117,28 @@
         #   autoStart = "shut-up";
         #   installArtifacts = true;
         # };
-        #cmp = {
-        #  enable = true;
-        #  settings = {
-        #    mapping = {
-        #      "<CR>" = "cmp.mapping.confirm({ select = false })";
-        #      "<Down>" = "cmp.mapping.select_next_item({})";
-        #      "<Up>" = "cmp.mapping.select_prev_item({})";
-        #    };
+        cmp = {
+          enable = true;
+          settings = {
+            mapping = {
+              "<CR>" = "cmp.mapping.confirm({ select = false })";
+              "<Down>" = "cmp.mapping.select_next_item({})";
+              "<Up>" = "cmp.mapping.select_prev_item({})";
+            };
 
-        #    snippet.expand = "function(args) require('luasnip').lsp_expand(args.body) end";
+            snippet.expand = "function(args) require('luasnip').lsp_expand(args.body) end";
 
-        #    sources = [
-        #      { name = "path"; }
-        #      { name = "nvim_lsp"; }
-        #      { name = "luasnip"; }
-        #      {
-        #        name = "buffer";
-        #        option.get_bufnrs.__raw = "vim.api.nvim_list_bufs";
-        #      }
-        #    ];
-        #  };
-        #};
+            sources = [
+              { name = "path"; }
+              { name = "nvim_lsp"; }
+              { name = "luasnip"; }
+              {
+                name = "buffer";
+                option.get_bufnrs.__raw = "vim.api.nvim_list_bufs";
+              }
+            ];
+          };
+        };
 
         which-key.enable = true;
         nvim-autopairs.enable = true;
@@ -174,7 +174,7 @@
           enable = true;
         };
         neorg = {
-          enable = true;
+          enable = false;
         };
         treesitter-context = {
           enable = true;
@@ -254,6 +254,14 @@
             gopls = {
               enable = true;
               autostart = true;
+              cmd = ["gopls"];
+              filetypes = ["go" "gomod" "gowork" "gotmpl"];
+            };
+            nimls = {
+              enable = true;
+              autostart = true;
+              cmd = ["nimlangserver"];
+              filetypes = ["nim"];
             };
             #marksman = {
             #  enable = true;
