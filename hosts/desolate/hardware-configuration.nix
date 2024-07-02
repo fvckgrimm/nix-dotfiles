@@ -12,6 +12,8 @@
   boot.initrd.availableKernelModules = [ "xhci_pci" "nvme" "usb_storage" "sd_mod" "hid_generic" "applespi" "applesmc" "coretemp" "hid_apple" "intel_lpss_pci" "spi_pxa2xx_platform" ];
   boot.initrd.kernelModules = [ ];
   boot.kernelModules = [ "kvm-intel" ];
+  boot.kernelParams = [ "resume_offset=SWAP_OFFSET" ];
+  boot.resumeDevice = "/dev/disk/by-uuid/2702284f-f0aa-4490-863f-4bf73a996345";
   boot.extraModulePackages = with config.boot.kernelPackages; [ 
   #rtl8812au 
   rtl88xxau-aircrack

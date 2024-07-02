@@ -36,6 +36,8 @@
     catppuccin-gtk
     catppuccin-sddm-corners
     pika-backup
+    dracula-theme
+    dracula-icon-theme
   ];
 
 }
