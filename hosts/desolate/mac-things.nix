@@ -30,8 +30,10 @@
   };
 
   systemd.services.disable-nvme-d3cold = {
+    enable = true;
     description = "Disable d3cold for NVMe to fix suspend issues";
     wantedBy = [ "multi-user.target" ];
+    after = [ "network.target" ];
     serviceConfig = {
       Type = "oneshot";
       ExecStart = "${pkgs.coreutils}/bin/echo 0 > /sys/bus/pci/devices/0000:01:00.0/d3cold_allowed";

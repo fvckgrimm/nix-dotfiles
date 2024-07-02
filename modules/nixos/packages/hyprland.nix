@@ -3,6 +3,8 @@
 {
 
   environment.systemPackages = with pkgs; [
+    hyprlock
+    gnome.adwaita-icon-theme
     waybar
     swww
     rofi-power-menu

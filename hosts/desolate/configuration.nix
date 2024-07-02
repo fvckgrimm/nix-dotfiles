@@ -96,8 +96,14 @@
   services.xserver.enable = true;
 
   # Enable the Budgie Desktop environment.
-  services.xserver.displayManager.lightdm.enable = true;
+  #services.xserver.displayManager.lightdm.enable = true;
   services.xserver.desktopManager.budgie.enable = true;
+  services.xserver.displayManager.gdm = {
+      enable = true;  
+      wayland = true; 
+  };
+  services.xserver.desktopManager.gnome.enable = true;
+ 
   #services.xserver.displayManager.sddm.enable = true;
   #services.xserver.displayManager.sddm.theme = "catppuccin-sddm-corners";
   #services.xserver.displayManager.sddm = {
@@ -114,13 +120,15 @@
     # program here, NOT in environment.systemPackages
   ];
 
-  environment.sessionVariables = {
+  environment.sessionVariables = lib.mkForce {
     #WLR_RENDERER_ALLOW_SOFTWARE = "1";
+    NIX_GSETTINGS_OVERRIDES_DIR = "/nix/store/83kdcnqcbgpgv1rvv89y3sniyh9iqhrw-gnome-gsettings-overrides/share/gsettings-schemas/nixos-gsettings-overrides/glib-2.0/schemas";
     NIXOS_OZONE_WL = "1";
   };
 
   xdg.portal.enable = true;
-  xdg.portal.extraPortals = [ pkgs.xdg-desktop-portal-gtk ];
+  xdg.portal.extraPortals = lib.mkForce [ pkgs.xdg-desktop-portal-gnome ];
+  xdg.portal.config.common.default = "gnome";
 
   # Configure keymap in X11
   services.xserver = {
