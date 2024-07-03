@@ -24,6 +24,21 @@
 
       search.force = true;
       search.engines = {
+        "YouTube" = {
+          urls = [
+            {
+              template = "https://www.youtube.com/results?search_query={searchTerms}";
+              parms = [
+                {
+                  name = "query";
+                  value = "{searchTerms}";
+                }
+              ];
+            }
+          ];
+          icon = "https://www.youtube.com/s/desktop/a7b1ec23/img/favicon_32x32.png";
+          definedAliases = ["@yt"];
+        };
         "Brave Search" = {
           urls = [
             {
@@ -36,7 +51,7 @@
                ];
             }
           ];
-          icon = ""; # need to get
+          icon = "https://raw.githubusercontent.com/uvera/firefox-extension-brave-search/main/favicon.png"; # need to get
           definedAliases = ["@br"];
         };
         "Home Manager NixOs" = {

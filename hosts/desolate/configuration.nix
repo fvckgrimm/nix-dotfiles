@@ -9,6 +9,7 @@
     [ # Include the results of the hardware scan.
       ./hardware-configuration.nix
       ./mac-things.nix
+      ./mac-bt.nix
       ../../modules/nixos/packages/default.nix
       ../../modules/nixos/hacking/default.nix
       ../../modules/nixos/security/default.nix
@@ -151,7 +152,7 @@
     alsa.support32Bit = true;
     pulse.enable = true;
     # If you want to use JACK applications, uncomment this
-    #jack.enable = true;
+    jack.enable = true;
 
     # use the example session manager (no others are packaged yet so this is enabled by default,
     # no need to redefine it in your config for now)

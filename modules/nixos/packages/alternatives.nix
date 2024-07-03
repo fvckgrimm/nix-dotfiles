@@ -4,6 +4,7 @@
 
   environment.systemPackages = with pkgs; [
     eza
+    glow
     ripgrep
     nitch
     starship

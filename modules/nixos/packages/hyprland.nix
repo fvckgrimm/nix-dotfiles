@@ -12,6 +12,8 @@
     rofi-emoji
     networkmanagerapplet
     blueman
+    bluez
+    bluez-tools
     wlr-randr
     nwg-displays
     wlsunset
