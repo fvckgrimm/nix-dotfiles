@@ -7,6 +7,7 @@
     lolcat
     tidy-viewer
     stow
+    chezmoi
     qutebrowser
     kitty
     ueberzugpp
@@ -31,6 +32,7 @@
     mullvad-vpn
     openvpn
     ranger
+    yazi
     librewolf
     thunderbird
     opensnitch

@@ -3,6 +3,7 @@
 {
 
   environment.systemPackages = with pkgs; [
+    rpi-imager
     go
     gopls
     rustup

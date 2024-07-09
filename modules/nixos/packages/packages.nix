@@ -4,6 +4,7 @@
 
   environment.systemPackages = with pkgs; [
     wezterm
+    alacritty
     curlie
     brave
     chromium
@@ -19,6 +20,7 @@
     qbittorrent
     transmission
     insomnia
+    bruno
     yt-dlp
     ffmpeg
     scrcpy
@@ -38,6 +40,7 @@
     nettools
     gnumake
     jq
+    jqp
     rsync
     nuclear
     cryptsetup
