@@ -271,6 +271,15 @@
             #};
             phpactor = { 
               enable = true;
+              autostart = true;
+              cmd = ["phpactor" "language-server"];
+              filetypes = ["php"];
+            };
+            intelephense = {
+              enable = false;
+              autostart = true;
+              cmd = ["intelephense" "--stdio"];
+              filetypes = ["php"];
             };
           };
         };

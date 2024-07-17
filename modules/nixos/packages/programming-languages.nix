@@ -3,6 +3,11 @@
 {
 
   environment.systemPackages = with pkgs; [
+    #redis
+    valkey
+    php
+    phpactor
+    nodePackages.intelephense
     rpi-imager
     go
     gopls

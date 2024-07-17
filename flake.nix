@@ -4,6 +4,7 @@
 
   inputs = {
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-24.05";
+    nixos-hardware.url = "github:NixOS/nixos-hardware/master";
     catppuccin.url = "github:catppuccin/nix";
     home-manager.url = "github:nix-community/home-manager/release-24.05";
     home-manager.inputs.nixpkgs.follows = "nixpkgs";
@@ -16,7 +17,7 @@
     };
   };
 
-  outputs = {self, nixpkgs, catppuccin, nixvim, home-manager, ...}@inputs:
+  outputs = {self, nixpkgs, catppuccin, nixvim, home-manager, nixos-hardware, ...}@inputs:
     let 
       lib = nixpkgs.lib;
       system = "x86_64-linux";
@@ -29,6 +30,7 @@
         modules = [ 
 	  ./hosts/desolate/configuration.nix
           home-manager.nixosModules.home-manager
+          nixos-hardware.nixosModules.apple-macbook-pro-14-1
         ];
       };
     };

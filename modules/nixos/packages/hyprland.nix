@@ -5,6 +5,8 @@
   environment.systemPackages = with pkgs; [
     hyprlock
     gnome.adwaita-icon-theme
+    gnomeExtensions.appindicator
+    gnome.gnome-tweaks
     waybar
     swww
     rofi-power-menu
