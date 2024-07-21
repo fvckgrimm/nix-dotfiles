@@ -11,48 +11,48 @@
     hyprland.url = "github:hyprwm/Hyprland";
     nixvim.url = "github:nix-community/nixvim/nixos-24.05";
     nixvim.inputs.nixpkgs.follows = "nixpkgs";
-    my-pkgs.url = "path:./pkgs";
     firefox-addons = {
       url = "gitlab:rycee/nur-expressions?dir=pkgs/firefox-addons";
       inputs.nixpkgs.follows = "nixpkgs";
     };
   };
 
-  outputs = {self, nixpkgs, catppuccin, nixvim, home-manager, nixos-hardware, my-pkgs, ...}@inputs:
+  outputs = {self, nixpkgs, catppuccin, nixvim, home-manager, nixos-hardware, ...}@inputs:
     let 
-      lib = nixpkgs.lib;
-      system = "x86_64-linux";
-      pkgs = import nixpkgs {
-        inherit system;
-        config.allowUnfree = true;
-        overlays = [
-          (final: prev: import my-pkgs { pkgs = final; })
-        ];
-      };
-      #pkgs = nixpkgs.legacyPackages.${system};
+        inherit (self) outputs;
+        lib = nixpkgs.lib;
+        systems = [ "aarch64-linux" "i686-linux" "x86_64-linux" "aarch64-darwin" "x86_64-darwin" ];
+        forAllSystems = nixpkgs.lib.genAttrs systems;
+        system = "x86_64-linux";
+        pkgs = nixpkgs.legacyPackages.${system};
 
     in {
-    nixosConfigurations = {
-      desolate = lib.nixosSystem {
-        inherit system;
-        modules = [ 
-	  ./hosts/desolate/configuration.nix
-          home-manager.nixosModules.home-manager
-          nixos-hardware.nixosModules.apple-macbook-pro-14-1
-        ];
-      };
+
+        packages = forAllSystems (system: import ./pkgs nixpkgs.legacyPackages.${system});
+        overlays = import ./overlays {inherit inputs;};
+
+        nixosConfigurations = {
+          desolate = lib.nixosSystem {
+            #inherit system;
+            specialArgs = {inherit inputs outputs;};
+            modules = [ 
+	          ./hosts/desolate/configuration.nix
+              home-manager.nixosModules.home-manager
+              nixos-hardware.nixosModules.apple-macbook-pro-14-1
+            ];
+          };
+        };
+        homeConfigurations = {
+          grimm = home-manager.lib.homeManagerConfiguration {
+            inherit pkgs;
+	        extraSpecialArgs = { inherit inputs outputs; };
+	        modules = [ 
+	          ./hosts/desolate/home.nix 
+	          catppuccin.homeManagerModules.catppuccin
+	          nixvim.homeManagerModules.nixvim
+	        ];
+          };
+        };
     };
-    homeConfigurations = {
-      grimm = home-manager.lib.homeManagerConfiguration {
-        inherit pkgs;
-	extraSpecialArgs = { inherit inputs; };
-	modules = [ 
-	  ./hosts/desolate/home.nix 
-	  catppuccin.homeManagerModules.catppuccin
-	  nixvim.homeManagerModules.nixvim
-	];
-      };
-    };
-  };
 
 }

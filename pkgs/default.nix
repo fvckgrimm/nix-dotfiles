@@ -1,10 +1,4 @@
-{
-  systems = ["x86_64-linux"];
-
-  perSystem = {pkgs, ...}: {
-    packages = {
-      angry-oxide = pkgs.callPackage ./angry-oxide {}; 
-      SF-Pro = pkgs.callPackage ./SF-Pro {inherit (pkgs) stdenv;};
-    };
-  };
+pkgs: {
+    angry-oxide = pkgs.callPackage ./angry-oxide {}; 
+    SF-Pro = pkgs.callPackage ./SF-Pro {inherit (pkgs) stdenv;};
 }
