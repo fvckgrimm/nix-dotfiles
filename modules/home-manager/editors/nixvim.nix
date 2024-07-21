@@ -275,11 +275,11 @@
               cmd = ["phpactor" "language-server"];
               filetypes = ["php"];
             };
-            intelephense = {
-              enable = false;
+            tailwindcss = {
+              enable = true;
               autostart = true;
-              cmd = ["intelephense" "--stdio"];
-              filetypes = ["php"];
+              cmd = ["tailwindcss-language-server"];
+              filetypes = ["html" "css" "tsx" "tmpl" "php" "svelte"];
             };
           };
         };

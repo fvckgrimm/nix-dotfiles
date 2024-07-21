@@ -7,7 +7,8 @@
     valkey
     php
     phpactor
-    nodePackages.intelephense
+    tailwindcss
+    tailwindcss-language-server
     rpi-imager
     go
     gopls

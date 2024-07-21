@@ -11,17 +11,25 @@
     hyprland.url = "github:hyprwm/Hyprland";
     nixvim.url = "github:nix-community/nixvim/nixos-24.05";
     nixvim.inputs.nixpkgs.follows = "nixpkgs";
+    my-pkgs.url = "path:./pkgs";
     firefox-addons = {
       url = "gitlab:rycee/nur-expressions?dir=pkgs/firefox-addons";
       inputs.nixpkgs.follows = "nixpkgs";
     };
   };
 
-  outputs = {self, nixpkgs, catppuccin, nixvim, home-manager, nixos-hardware, ...}@inputs:
+  outputs = {self, nixpkgs, catppuccin, nixvim, home-manager, nixos-hardware, my-pkgs, ...}@inputs:
     let 
       lib = nixpkgs.lib;
       system = "x86_64-linux";
-      pkgs = nixpkgs.legacyPackages.${system};
+      pkgs = import nixpkgs {
+        inherit system;
+        config.allowUnfree = true;
+        overlays = [
+          (final: prev: import my-pkgs { pkgs = final; })
+        ];
+      };
+      #pkgs = nixpkgs.legacyPackages.${system};
 
     in {
     nixosConfigurations = {

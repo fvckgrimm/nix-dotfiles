@@ -3,10 +3,7 @@
 
   perSystem = {pkgs, ...}: {
     packages = {
-      biome = pkgs.callPackage ./biome {};
-      discordo = pkgs.callPackage ./discordo {};
-      # instant repl with automatic flake loading
-      repl = pkgs.callPackage ./repl {};
+      angry-oxide = pkgs.callPackage ./angry-oxide {}; 
       SF-Pro = pkgs.callPackage ./SF-Pro {inherit (pkgs) stdenv;};
     };
   };

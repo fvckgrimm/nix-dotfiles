@@ -60,6 +60,7 @@
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
 
   fonts.packages = with pkgs; [ 
+    SF-Pro
     ubuntu_font_family
     liberation_ttf
     fira-code
@@ -88,8 +89,8 @@
         rgba = "rgb";
       };
       defaultFonts = {
-        serif = [ "DejaVu Math TeX Gyre" "JetBrainsMono" "Noto Color Emoji"];
-        sansSerif = [ "Ubuntu" "Hack" "JetBrainsMono" "Noto Color Emoji"];
+        serif = [ "SF Pro Text" "DejaVu Math TeX Gyre" "JetBrainsMono" "Noto Color Emoji"];
+        sansSerif = [ "SF Pro Display" "Ubuntu" "Hack" "JetBrainsMono" "Noto Color Emoji"];
         monospace = [ "GeistMono Nerd Font" "Noto Color Emoji"];
         emoji = ["Noto Color Emoji"];
       };

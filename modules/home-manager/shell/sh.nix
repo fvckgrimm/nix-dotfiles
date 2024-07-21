@@ -53,6 +53,30 @@
 
         zellij attach "$(echo -e $SELECTION)"
       }
+
+      zd() {
+        if [ -z $1 ]; then
+          SELECTION=$(
+            zellij list-sessions \
+              --no-formatting \
+              | awk '{ print $1 }' \
+              | gum choose \
+                --cursor="▌" \
+                --header="Select a session to delete" \
+                --selected="ide" \
+                --ordered --select-if-one --cursor.foreground="139"
+          )
+        else
+          SELECTION=$1
+        fi
+
+        if [ -z $SELECTION ]; then
+          return 0
+        fi
+
+        zellij d "$(echo -e $SELECTION)"
+      }
+
     '';
 
     shellAliases = {
@@ -70,6 +94,7 @@
       zl = "zellij ls";
       tree = "eza --tree --icons --tree";
       cd = "z";
+      c = "clear";
 
       cat = "bat --theme=base16 --number --color=always --paging=never --tabs=2 --wrap=never";
       cp = "cp -iv";

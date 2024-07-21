@@ -4,6 +4,7 @@
 
   environment.systemPackages = with pkgs; [
     hyprlock
+    gpick
     gnome.adwaita-icon-theme
     gnomeExtensions.appindicator
     gnome.gnome-tweaks
