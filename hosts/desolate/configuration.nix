@@ -69,7 +69,7 @@
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
 
   fonts.packages = with pkgs; [ 
-    #SF-Pro
+    SF-Pro
     ubuntu_font_family
     liberation_ttf
     fira-code

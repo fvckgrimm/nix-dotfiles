@@ -39,6 +39,7 @@
 	          ./hosts/desolate/configuration.nix
               home-manager.nixosModules.home-manager
               nixos-hardware.nixosModules.apple-macbook-pro-14-1
+              { nixpkgs.overlays = [ outputs.overlays.additions ]; }
             ];
           };
         };
