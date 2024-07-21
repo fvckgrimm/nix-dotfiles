@@ -4,7 +4,7 @@
 }:
 
 rustPlatform.buildRustPackage rec {
-  pname = "angry-oxide";
+  pname = "angryoxide";
   version = "0.8.13"; 
 
   src = fetchFromGitHub {
