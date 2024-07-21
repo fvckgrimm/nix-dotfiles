@@ -8,7 +8,7 @@
     wireshark
     nmap
     rustscan
-    angryoxide
+    angry-oxide
 #netexec - add later on manually 
     urlhunter
     masscan
