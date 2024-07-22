@@ -14,7 +14,7 @@ rustPlatform.buildRustPackage rec {
     sha256 = "1p2af8av31w1i1353vdwkv0rfl47v2i03p3wycsq22svi3py2zzc"; 
   };
 
-  cargoSha256 = "sha256-pT5mQDpxV+LhWFKQd87HI8MZ7qPenHB3z8lGN2EB65g=";
+  cargoSha256 = "sha256-pXRYiJW4a5AfAolzhM6diMS0AvdQPg5lT7hdOM0QlwI=";
 
   meta = with lib; {
     description = "A 802.11 Attack tool built in Rust 🦀 !";
