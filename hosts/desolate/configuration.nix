@@ -70,6 +70,7 @@
 
   fonts.packages = with pkgs; [ 
     SF-Pro
+    sf-mono-powerline
     ubuntu_font_family
     liberation_ttf
     fira-code

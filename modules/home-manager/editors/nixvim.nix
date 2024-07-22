@@ -7,9 +7,9 @@
       viAlias = true;
       vimAlias = true;
       colorschemes.catppuccin.enable = true;
-      #colorschemes.catppuccin.settings = {
-      #  transparent_background = false;
-      #};
+      colorschemes.catppuccin.settings = {
+        transparent_background = false;
+      };
       opts = {
         expandtab = true;
         shiftwidth = 4;
