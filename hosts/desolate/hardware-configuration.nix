@@ -13,6 +13,7 @@
   boot.initrd.kernelModules = [ ];
   boot.kernelModules = [ "kvm-intel" ];
   boot.kernelParams = [ 
+  #"hid_apple.swap_opt_cmd=1"
   "resume_offset=SWAP_OFFSET" 
   "acpi_osi=Linux"
   "acpi_backlight=video"
