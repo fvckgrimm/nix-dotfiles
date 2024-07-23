@@ -12,6 +12,7 @@
       ../../modules/nixos/packages/default.nix
       ../../modules/nixos/hacking/default.nix
       ../../modules/nixos/security/default.nix
+      ../../modules/system/default.nix
     ];
 
   nixpkgs = {
