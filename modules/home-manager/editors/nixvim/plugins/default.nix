@@ -1,6 +1,7 @@
 {
     imports = [
-        ./cmp.nix 
+        ./cmp.nix
+        ./dashboard.nix
         ./luaine.nix
         ./lazygit.nix
         ./noice.nix
