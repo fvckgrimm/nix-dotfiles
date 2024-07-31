@@ -3,6 +3,9 @@
 {
 
   environment.systemPackages = with pkgs; [
+    feh
+    qimgv
+    sxiv
     mbpfan
     lolcat
     tidy-viewer

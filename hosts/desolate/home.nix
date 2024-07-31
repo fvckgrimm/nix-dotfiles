@@ -1,4 +1,4 @@
-{ config, pkgs, ... }:
+{ config, inputs, pkgs, nixvimConfig, ... }:
 
 {
   # Home Manager needs a bit of information about you and the paths it should
@@ -9,7 +9,8 @@
   imports = [
     ../../modules/home-manager/shell/default.nix
     ../../modules/home-manager/editors/micro.nix
-    ../../modules/home-manager/editors/nixvim.nix
+    #../../modules/home-manager/editors/nixvim/default.nix
+    ../../modules/home-manager/editors/nixvim.nix 
     ../../modules/home-manager/browsers/default.nix
   ];
 
@@ -24,16 +25,17 @@
 
   # The home.packages option allows you to install Nix packages into your
   # environment.
-  home.packages = [
+  home.packages = with pkgs; [
     # # Adds the 'hello' command to your environment. It prints a friendly
     # # "Hello, world!" when run.
-    pkgs.hello
-    pkgs.zsh-autosuggestions
-    pkgs.zsh-syntax-highlighting
-    pkgs.zsh-history-substring-search
-    pkgs.btop
-    pkgs.thunderbird
-    pkgs.librewolf
+    hello
+    zsh-autosuggestions
+    zsh-syntax-highlighting
+    zsh-history-substring-search
+    btop
+    thunderbird
+    librewolf
+    #inputs.nixvim.packages.${system}.default 
 
     # # It is sometimes useful to fine-tune packages, for example, by applying
     # # overrides. You can do that directly here, just don't forget the
@@ -81,6 +83,7 @@
 
   # Nixvim
   programs.nixvim.enable = true;
+  #programs.nixvim.extraConfigVim = nixvimConfig.config;
   #programs.nixvim.defaultEditor = true;
 
   #Git 
@@ -97,10 +100,10 @@
   
   catppuccin.enable = true;
   gtk.enable = true;
-  gtk.catppuccin = {
-    enable = true;
-    accent = "pink";
-  };
+  #gtk.catppuccin = {
+  #  enable = true;
+  #  accent = "pink";
+  #};
   
   programs.btop.enable = true;
   programs.btop.catppuccin.enable = true;

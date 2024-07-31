@@ -1,14 +1,23 @@
 { pkgs, ... }:
 {
+
+  imports = [
+    ./nixvim/plugins 
+    ./nixvim/core
+  ];
+
   programs.nixvim =
     {
       enable = true;
       defaultEditor = true;
       viAlias = true;
       vimAlias = true;
-      colorschemes.catppuccin.enable = true;
-      colorschemes.catppuccin.settings = {
-        transparent_background = false;
+      colorschemes.catppuccin = {
+        enable = true;
+        settings = {
+            flavour = "macchiato"; # mocha, macchiato, frappe, latte
+            transparent_background = false;
+        };
       };
       opts = {
         expandtab = true;
@@ -47,98 +56,12 @@
 
       };
 
-      keymaps =
-        [
-          {
-            key = "//";
-            action = ":noh<CR>";
-          }
-          {
-            key = "<C-h>";
-            action = "<cmd>lua require('luasnip').jump(1)<CR>";
-          }
-          {
-            key = "<leader>ff";
-            action = "<cmd>lua require('telescope.builtin').find_files()<CR>";
-          }
-          {
-            key = "<leader>fg";
-            action = "<cmd>lua require('telescope.builtin').live_grep()<CR>";
-          }
-          {
-            key = "<leader>gs";
-            action = ":Neogit<CR>";
-          }
-          {
-            key = "<leader>af";
-            action = "<cmd> lua vim.lsp.buf.format()<CR>";
-          }
-          {
-            key = "<leader>ac";
-            action = ":Neogen<CR>";
-          }
-          {
-            key = "<leader>m";
-            action = ":MaximizerToggle<CR>";
-          }
-          {
-            key = "<leader>t";
-            action = ":CHADopen<CR>";
-          }
-          {
-            key = "<leader>l";
-            action = "<cmd> lua require('lsp_lines').toggle()<CR>";
-          }
-          {
-            key = "<leader>jd";
-            action = "<cmd> lua vim.lsp.buf.definition() <CR>";
-          }
-          {
-            key = "<leader>jr";
-            action = "<cmd>Lspsaga finder<CR>";
-          }
-          {
-            key = "<leader>rs";
-            action = "<cmd>Lspsaga rename<CR>";
-          }
-          {
-            key = "<leader>ca";
-            action = "<cmd>Lspsaga code_action<CR>";
-          }
-          {
-            key = "<F4>";
-            action = "<cmd>ToggleTerm<CR>";
-          }
-        ];
-
       plugins = {
         # coq-nvim = {
         #   enable = true;
         #   autoStart = "shut-up";
         #   installArtifacts = true;
-        # };
-        cmp = {
-          enable = true;
-          settings = {
-            mapping = {
-              "<CR>" = "cmp.mapping.confirm({ select = false })";
-              "<Down>" = "cmp.mapping.select_next_item({})";
-              "<Up>" = "cmp.mapping.select_prev_item({})";
-            };
-
-            snippet.expand = "function(args) require('luasnip').lsp_expand(args.body) end";
-
-            sources = [
-              { name = "path"; }
-              { name = "nvim_lsp"; }
-              { name = "luasnip"; }
-              {
-                name = "buffer";
-                option.get_bufnrs.__raw = "vim.api.nvim_list_bufs";
-              }
-            ];
-          };
-        };
+        # }; 
 
         which-key.enable = true;
         nvim-autopairs.enable = true;
@@ -211,78 +134,6 @@
           enable = true;
         };
         chadtree.view.openDirection = "right";
-        lsp = {
-          enable = true;
-          servers = {
-            tsserver.enable = true;
-            nil-ls = {
-              enable = true;
-            };
-            pylsp = {
-              enable = true;
-              settings = {
-                plugins = {
-                  autopep8.enabled = false;
-                  black.enabled = false;
-                  flake8.enabled = false;
-                  mccabe.enabled = false;
-                  memestra.enabled = false;
-                  pycodestyle.enabled = false;
-                  pydocstyle.enabled = false;
-                  isort.enabled = false;
-                  pyflakes.enabled = false;
-                  pylint.enabled = false;
-                  pylsp_mypy.enabled = false;
-                  yapf.enabled = false;
-                };
-              };
-            };
-            ruff-lsp = {
-              enable = true;
-
-            };
-
-            nixd = {
-              enable = true; # k
-            };
-            lua-ls = {
-              enable = true;
-            };
-            bashls = {
-              enable = true;
-            };
-            gopls = {
-              enable = true;
-              autostart = true;
-              cmd = ["gopls"];
-              filetypes = ["go" "gomod" "gowork" "gotmpl"];
-            };
-            nimls = {
-              enable = true;
-              autostart = true;
-              cmd = ["nimlangserver"];
-              filetypes = ["nim"];
-            };
-            #marksman = {
-            #  enable = true;
-            #};
-            #gleam = {
-            #  enable = true;  
-            #};
-            phpactor = { 
-              enable = true;
-              autostart = true;
-              cmd = ["phpactor" "language-server"];
-              filetypes = ["php"];
-            };
-            tailwindcss = {
-              enable = true;
-              autostart = true;
-              cmd = ["tailwindcss-language-server"];
-              filetypes = ["html" "css" "tsx" "tmpl" "php" "svelte"];
-            };
-          };
-        };
         #none-ls = {
         #  enable = true;
         #  sources = {
@@ -321,7 +172,25 @@
 
       extraConfigLua = ''
         vim.diagnostic.config({ virtual_lines = false })
+
+        require("telescope").load_extension("lazygit")
+
+        -- Configuration for UFO folds
+        -- require('ufo').setup({
+        -- 	provider_selector = function(bufnr, filetype, buftype)
+        -- 		return { 'lsp', 'indent' }
+        -- 	end
+        -- })
+        vim.keymap.set('n', 'zR', require('ufo').openAllFolds, { desc = "Open all folds" })
+        vim.keymap.set('n', 'zM', require('ufo').closeAllFolds, { desc = "Close all folds" })
+        vim.keymap.set('n', 'zK', function()
+            local winid = require('ufo').peekFoldedLinesUnderCursor()
+            if not winid then
+                vim.lsp.buf.hover()
+            end
+        end, { desc = "Peek Fold" })
       '';
+
       extraPlugins = with pkgs.vimPlugins; [
         vim-hardtime
       ];

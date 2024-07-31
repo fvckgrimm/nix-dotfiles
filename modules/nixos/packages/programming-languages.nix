@@ -4,6 +4,7 @@
 
   environment.systemPackages = with pkgs; [
     #redis
+    argc
     valkey
     php
     phpactor

@@ -3,6 +3,8 @@
 {
 
   environment.systemPackages = with pkgs; [
+    dracula-theme
+    dracula-icon-theme
     hyprlock
     gpick
     gnome.adwaita-icon-theme
