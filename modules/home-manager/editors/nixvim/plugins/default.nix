@@ -2,6 +2,7 @@
     imports = [
         ./cmp.nix
         ./dashboard.nix
+        ./render-markdown.nix
         ./luaine.nix
         ./lazygit.nix
         ./noice.nix

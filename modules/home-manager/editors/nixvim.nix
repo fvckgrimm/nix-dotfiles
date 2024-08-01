@@ -20,6 +20,7 @@
         };
       };
       opts = {
+        conceallevel = 1;
         expandtab = true;
         shiftwidth = 4;
         smartindent = true;
@@ -174,6 +175,8 @@
         vim.diagnostic.config({ virtual_lines = false })
 
         require("telescope").load_extension("lazygit")
+
+        require('render-markdown').setup({})
 
         -- Configuration for UFO folds
         -- require('ufo').setup({

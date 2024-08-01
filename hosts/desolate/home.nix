@@ -79,6 +79,7 @@
   #
   home.sessionVariables = {
    EDITOR = "nvim";
+   GTK_THEME = "Dracula";
   };
 
   # Nixvim
