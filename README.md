@@ -1,5 +1,7 @@
 # Nix Dotfiles
 
+## This is put on hold as I'm going back to arch(nyarch linux btw) for the time being, will maybe come back to nixos eventually, but for now I don't think it's entirely for me no matter how much I do love the idea of it :(
+
 ![screenshot of hyprland setup](./assets/1718526703.png)
 ---
 ![screenshot of budgie desktop](./assets/1716420862.png)
